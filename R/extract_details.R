@@ -14,7 +14,7 @@ extract_details <- function(node) {
   date  <- xml_attr(node, "date")
 
   # extract textual content (richtext or fallback)
-  txt <- extract_text_from_node(n)
+  txt <- extract_text_from_node(node)
 
   cc <- coords_to_center(coords)
   tibble::tibble(

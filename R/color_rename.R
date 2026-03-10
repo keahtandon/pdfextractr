@@ -6,7 +6,7 @@ color_rename <- function(df) {
     distinct()
 
   colors <- hex_to_check %>%
-    mutate(color = hex_to_color(hex))
+    mutate(color = col2hex2col::hex_to_color(hex))
 
   df2 <- df %>%
     left_join(colors, by = "hex") %>%
